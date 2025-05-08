@@ -20,8 +20,8 @@ Ne zaman silah alıyor, ne zaman eco yapıyor, oyuncuların para durumu neydi gi
 
 ---
 
-Bu modeller birlikte çalışarak gerçekçi, bağlamsal ve öğrenen bir karar mekanizması oluşturur.  
-Amaç sadece oyuncunun **ne yaptığını** değil, **neden yaptığını** da öğrenmek ve buna göre **akıllıca kararlar alabilen** bir yapay zeka geliştirmektir.
+Bunlar gibi alanında uzaman birçok modeli birlikte çalışarak gerçekçi, bağlamsal ve öğrenen bir karar mekanizması oluşturur.  
+Amaç sadece oyuncunun **ne yaptığını** değil, **neden yaptığını** da öğrenmek ve buna göre **akıllıca kararlar alabilen** bir yapay zeka olmasıdır.
 
 Gerçek bir oyuncu bile bu kadar çok veriyi aynı anda değerlendiremez.  
 İnsanlar genellikle sıralı şekilde düşünür ve kararlarını refleks, anlık değerlendirme ya da genel sezgiye göre verir.
@@ -35,7 +35,7 @@ Gerçek bir oyuncu bile bu kadar çok veriyi aynı anda değerlendiremez.
 ### Temel Özellikleri
 - Oyunu açıp maça girebilir, atıldıysa tekrar bağlanabilir.  
 - Maç başladığında uygun bir silahı alır.  
-- Maç esnasında en yakın oyuncuya doğru hareket ederek oynar, strateji analizi yapmaz.
+- Maç esnasında en yakın oyuncuya doğru hareket ederek oynar, detaylı düşünmez ve stratejik analiz yapmaz.
 
 ---
 

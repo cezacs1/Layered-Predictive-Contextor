@@ -23,8 +23,8 @@ Ne zaman silah alıyor, ne zaman eco yapıyor, oyuncuların para durumu neydi gi
 Bunlar gibi alanında uzaman birçok modeli birlikte çalışarak gerçekçi, bağlamsal ve öğrenen bir karar mekanizması oluşturur.  
 Amaç sadece oyuncunun **ne yaptığını** değil, **neden yaptığını** da öğrenmek ve buna göre **akıllıca kararlar alabilen** bir yapay zeka olmasıdır.
 
-Gerçek bir oyuncu bile bu kadar çok veriyi aynı anda değerlendiremez.  
-İnsanlar genellikle sıralı şekilde düşünür ve kararlarını refleks, anlık değerlendirme ya da genel sezgiye göre verir.
+Örneğin bir oyuncu nereye gideceğini ve hangi silahı alacağını düşünürken, düşmanların olası rotalarını aynı anda analiz edemez.
+İnsanlar genellikle sıralı şekilde düşünür ve kararlarını refleks, anlık değerlendirme ya da genel sezgiye göre verir. LPC ise tüm bu değişkenleri aynı anda işler.
 
 ---
 

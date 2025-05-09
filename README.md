@@ -21,7 +21,7 @@ Ne zaman silah alıyor, ne zaman eco yapıyor, oyuncuların para durumu neydi gi
 
 ---
 
-Bunlar gibi alanında uzaman birçok modeli birlikte çalışarak gerçekçi, bağlamsal ve öğrenen bir karar mekanizması oluşturur.  
+Bunlar gibi alanında uzman birçok modeli birlikte çalışarak gerçekçi, bağlamsal ve öğrenen bir karar mekanizması oluşturur.  
 Amaç sadece oyuncunun **ne yaptığını** değil, **neden yaptığını** da öğrenmek ve buna göre **akıllıca kararlar alabilen** bir yapay zeka olmasıdır.
 
 Örneğin bir oyuncu nereye gideceğini ve hangi silahı alacağını düşünürken, düşmanların olası rotalarını aynı anda analiz edemez.

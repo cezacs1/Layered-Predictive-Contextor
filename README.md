@@ -1,21 +1,28 @@
 # LPC (Layered Predictive Contextor)
-[Katmanlı tahminsel bağlam işeyici]
 
 **Layered Predictive Contextor**, gerçek bir CS2 oyuncusunun oyun içi davranışlarını öğrenmek için geliştirilmiş, çok katmanlı ve karar tabanlı bir yapay zeka modelidir.  
 Model, **MoE (Mixture of Experts)** yaklaşımıyla çalışır; yani farklı alanlarda ve olaylarda uzmanlaşmış modelleri birlikte kullanarak birden çok durumu analiz eder ve karar verir.
 
 ### Örnek Expert Modeller
 
-**ExExpertModelPaths**  
+**ExExpertModelPaths**
 Oyuncunun hareketlerini, pusmalarını, rotate ve retake kararlarını analiz eder.  
 Bir yerden başka bir yere geçişleri hem `placeName` hem de `Vector3 HeadPosition` olarak kaydeder.  
 Amacı, oyuncunun neden oraya gittiğini, orada neden beklediğini ve bu hareketin ne kadar mantıklı olduğu gibi sorulara yanıt aramaktır.
 
-**ExExpertModelGrenades**  
+**ExExpertModelViewAngles**
+Oyuncuların mouse kullanımlarını öğrenme amacıyla geliştirilen bir algoritmadır.
+oyuncular bir düşmanı gördüklerinde nasıl ateş ediyor, normal ilerlerken mouse kullanımları nasıl, etrafı gözlerken nasıl hareket ediyorlar,
+crosshair placement'leri nasıl.. gibi soruların cevabını öğrenerek analiz yapar.
+Bu sürekli aynı hassasiyetle ve hızla hareket etmesini engelleyerek gerçek mousek kullanımını simüle eder.
+Botun bu hareketleri uygularken DPI ve sensitivity'niziz farklı olması, işleyişini değiştirmez;
+Kendi hssasiyetinizi ve el alışkanlıklarınızı öğrenerek ona uyum sağlar.
+
+**ExExpertModelGrenades**
 Oyuncuların bomba kullanımını ve etkisini analiz eder.  
 Neden o bombayı oraya attı, etkili oldu mu, hangi oyuncular bundan etkilendi, ne kadar sürdü, daha önce aynı şey yaşanmış mıydı gibi soruları değerlendirir.
 
-**ExExpertModelEconomy**  
+**ExExpertModelEconomy**
 Oyuncuların ekonomik kararlarını anlamaya çalışır.  
 Ne zaman silah alıyor, ne zaman eco yapıyor, oyuncuların para durumu neydi gibi kararların arkasındaki stratejileri analiz eder.
 
@@ -26,17 +33,6 @@ Amaç sadece oyuncunun **ne yaptığını** değil, **neden yaptığını** da �
 
 Örneğin bir oyuncu nereye gideceğini ve hangi silahı alacağını düşünürken, düşmanların olası rotalarını aynı anda analiz edemez.
 İnsanlar genellikle sıralı şekilde düşünür ve kararlarını refleks, anlık değerlendirme ya da genel sezgiye göre verir. LPC ise tüm bu değişkenleri aynı anda işler.
-
----
-
-## İlk Modelimiz: LPC-Atom
-
-**LPC-Atom**, detaylı düşünme gerektirmeyen DeathMatch oyun moduna uyum sağlamak için geliştirilen, çok hızlı ve küçük bir modeldir.
-
-### Temel Özellikleri
-- Oyunu açıp maça girebilir, atıldıysa tekrar bağlanabilir.  
-- Maç başladığında uygun bir silahı alır.  
-- Maç esnasında en yakın oyuncuya doğru hareket ederek oynar, detaylı düşünmez ve stratejik analiz yapmaz.
 
 ---
 
@@ -57,9 +53,21 @@ Bu sayede, LPC'nin öğrendiğini uygulama aşamasında negatif puanlı olan ver
 
 ### Güvenlik ve Legalite
 Modellerimiz, siz menü üzerinden onay vermediğiniz taktirde kendi kendini eğitemez, round'ları analiz edemez, demoları izleyemez.
-Sizden gelen verilere ince kontroller yapmadan, modellerimizi eğitmek için kullanmayız.
-
+Sizden gelen verilere ince kontroller yapmadan modellerimizi eğitmek için kullanmayız.
 
 ## Not
 
 **Bu sistemin amacı, CS2'de bir hile gibi oynamak değil; gerçek bir oyuncu gibi düşünen bir yapay zeka üretmektir.**
+
+---
+
+
+## İlk Modelimiz: LPC-Atom
+
+**LPC-Atom**, detaylı düşünme gerektirmeyen DeathMatch oyun moduna uyum sağlamak için geliştirilen, çok hızlı ve küçük bir modeldir.
+
+### Temel Özellikleri
+- Oyunu açıp maça girebilir, atıldıysa tekrar bağlanabilir.  
+- Maç başladığında uygun bir silahı alır.  
+- Maç esnasında en yakın oyuncuya doğru hareket ederek oynar, detaylı düşünmez ve stratejik analiz yapmaz.
+- Normal bir cs2 oyuncusu gibi ölüm maçı oynamaya programlıdır, gerçekcidir.

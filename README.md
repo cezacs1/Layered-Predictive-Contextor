@@ -40,7 +40,7 @@ Gerçek bir oyuncu bile bu kadar çok veriyi aynı anda değerlendiremez.
 ---
 
 ## Model Eğitimleri
-###Modellerimizi 3 farklı yöntemle eğitiyoruz:
+### Modellerimizi 3 farklı yöntemle eğitiyoruz:
 
 - Gerçek zamanlı izleme; Bir maça bağlandığınızda oyun bitene kadar tüm oyuncuların hareketleri takip edilir.
 Round sona erdiğinde veriler işlenir ve anlamlı olanlar veri tabanına kaydedilir. Özellikle uzun süren, stratejik kararlar içeren round'lar modellerimizin eğitime daha çok katkı sağlar.

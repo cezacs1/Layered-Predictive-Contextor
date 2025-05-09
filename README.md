@@ -1,4 +1,5 @@
 # LPC (Layered Predictive Contextor)
+[Katmanlı tahminsel bağlam işeyici]
 
 **Layered Predictive Contextor**, gerçek bir CS2 oyuncusunun oyun içi davranışlarını öğrenmek için geliştirilmiş, çok katmanlı ve karar tabanlı bir yapay zeka modelidir.  
 Model, **MoE (Mixture of Experts)** yaklaşımıyla çalışır; yani farklı alanlarda ve olaylarda uzmanlaşmış modelleri birlikte kullanarak birden çok durumu analiz eder ve karar verir.

@@ -39,6 +39,26 @@ Gerçek bir oyuncu bile bu kadar çok veriyi aynı anda değerlendiremez.
 
 ---
 
+## Model Eğitimleri
+###Modellerimizi 3 farklı yöntemle eğitiyoruz:
+
+- Gerçek zamanlı izleme; Bir maça bağlandığınızda oyun bitene kadar tüm oyuncuların hareketleri takip edilir.
+Round sona erdiğinde veriler işlenir ve anlamlı olanlar veri tabanına kaydedilir. Özellikle uzun süren, stratejik kararlar içeren round'lar modellerimizin eğitime daha çok katkı sağlar.
+Sizden öğrenilen verileri kontrol etmeden eğitime dahil etmiyoruz.
+
+- Demo izleme; CS2'nin kendi oyun modlarında ve Faceit üzerinde oynanılan maç demolarının bazılarını model eğitimlerine dahil ediyoruz.
+Henellikle çekişmeli ve uzun süren maçların demolarından eğitiyoruz.
+
+- Kontrol ve ince ayar; LPC'nin öğrenme algoritması, başarısızlık getiren hareketleri ve davranışları, zorunda kalmadıkca kullanmamaya programlanmıştır.
+Eğer round içinde bir oyuncu gereksiz veya saçma bir hareket yapıp öldüyse, takımına zarar verdiyse, attığı bomba takım arkadaşına zarar verdiyse gibi..
+Soruları cevaplandırarak neyin doğru ve yanlış olduğunu öğrenir.
+Bu sayede, LPC'nin öğrendiğini uygulama aşamasında negatif puanlı olan veriler karar ağacında elenir.
+
+### Güvenlik ve Legalite
+Modellerimiz, siz menü üzerinden onay vermediğiniz taktirde kendi kendini eğitemez, round'ları analiz edemez, demoları izleyemez.
+Sizden gelen verilere ince kontroller yapmadan, modellerimizi eğitmek için kullanmayız.
+
+
 ## Not
 
 **Bu sistemin amacı, CS2'de bir hile gibi oynamak değil; gerçek bir oyuncu gibi düşünen bir yapay zeka üretmektir.**
